@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:grey ;
+}
+
+main {
+    flex: 4;
+}
+
+aside {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.box {
+    border: 2px solid black;
+    margin: 10px;
+    background-color: white;
+    padding: 0 10px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+.moving_square {
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    animation: moveSquare 5s linear infinite;
+  
+  }
+  
+@keyframes moveSquare {
+  
+0% {
+    background-color: red;
+    transform: translateY(0);
+    }
+  
+25% {
+    background-color: green;
+    transform: translateY(300px);  
+    }
+  
+50% {  
+    background-color: blue;
+    transform: translateY(300px) translateX(-300px);
+    }
+
+75% {  
+    background-color: yellow;
+    transform: translateX(-300px);
+  
+    }
+  
+100% {  
+    background-color: red;
+    transform: translateY(0);  
+    }
+  }
